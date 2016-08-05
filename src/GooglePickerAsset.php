@@ -12,8 +12,6 @@ namespace DragonBlack\extfilestorage;
 use yii\web\AssetBundle;
 
 class GooglePickerAsset extends AssetBundle {
-    public $sourcePath = __DIR__.'/assets';
-
     public $js = [
         'https://apis.google.com/js/api.js',
         'https://apis.google.com/js/client.js',
@@ -23,5 +21,10 @@ class GooglePickerAsset extends AssetBundle {
     public $depends = [
         'yii\web\JqueryAsset',
     ];
+
+    public function init() {
+        $this->sourcePath = __DIR__.'/assets';
+        parent::init();
+    }
 
 }
