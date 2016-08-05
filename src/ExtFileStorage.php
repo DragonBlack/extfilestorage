@@ -10,5 +10,6 @@ namespace dragonblack\extfilestorage;
 
 
 class ExtFileStorage {
-
+    public $apikey;
+    public $secretkey;
 }
